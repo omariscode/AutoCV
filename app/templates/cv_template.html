@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: sans-serif;
+        font-size: 16px;
+        line-height: 24px;
+        background-color: #ffffff;
+        margin: 0;
+        padding: 0;
+    }
+
+    @page {
+        size: A4;
+        margin: 0cm;
+    }
+
+    .page {
+        width: 100%;
+        background-color: white;
+        padding: 0;
+    }
+
+    .top-bar {
+        height: 120px;
+        background-color: #848484;
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .top-bar h1 {
+        margin: 0;
+        font-size: 32px;
+        letter-spacing: 4px;
+    }
+
+    .wrapper {
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+    }
+
+    .side-bar {
+        display: table-cell;
+        width: 35%;
+        background-color: #F7E0C1;
+        padding: 20px;
+        vertical-align: top;
+    }
+
+    .content-container {
+        display: table-cell;
+        width: 65%;
+        padding: 20px;
+        vertical-align: top;
+    }
+
+    .mugshot {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .mugshot img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+    }
+
+    .side-header {
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: 20px;
+        border-bottom: 1px solid #888;
+        padding-bottom: 5px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .list-thing {
+        margin-left: 15px;
+        margin-bottom: 10px;
+    }
+
+    .content-container h3 {
+        font-size: 20px;
+        margin-top: 20px;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .content-container p {
+        margin-bottom: 15px;
+        text-align: justify;
+    }
+
+    .greyed {
+        background-color: #DDD;
+        padding: 10px;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        font-weight: bold;
+    }
+
+    .social {
+        margin: 10px 0;
+        font-size: 14px;
+    }
+
+    .separator {
+        height: 2px;
+        width: 100px;
+        background-color: #999;
+        margin: 10px auto;
+    }
+
+    .title {
+        text-align: center;
+        font-weight: bold;
+        letter-spacing: 4px;
+        font-size: 18px;
+        margin: 20px 0;
+    }
+</style>
+
+</head>
+<body>
+    <div class="rela-block page">
+        <div class="rela-block top-bar">
+            <div class="caps name"><div class="abs-center" style="font-size: 30px;">{{ user.name }}</div></div>
+        </div>
+        <div class="side-bar">
+            <div class="mugshot">
+                <div class="logo">
+                    <img src="{{ user.photo }}" alt="" style="width: 200px; height: 200px; border-radius: 50%;">
+                </div>
+            </div>
+            <p>{{ user.location }}</p>
+            <p>(+244) 950 787 059</p>
+            <p>omarscode007@gmail.com</p><br>
+            <p class="rela-block social pinterest">GitHub: <a href="https://github.com/omariscode">{{ user.github_url }}</a></p>
+            <p class="rela-block social linked-in">LinkedIn: <a href="https://www.linkedin.com/in/omar-rodrigues007/">https://www.linkedin.com/in/omar-rodrigues007/</a></p>
+            <p class="rela-block caps side-header">Expertise</p>
+            {% for skill in user.skills %}
+                <p class="rela-block list-thing">{{ skill }}</p>
+            {% endfor %}
+            
+            <p class="rela-block caps side-header">Education</p>
+            <p class="rela-block list-thing">Colégio Àrvore da Felicidade</p>
+        </div>
+        <div class="rela-block content-container">
+            <h2 class="rela-block caps title">Jr Backend Developer</h2>
+            <div class="rela-block separator"></div>
+            <div class="rela-block caps greyed">Profile</div>
+            <p class="long-margin">{{ user.bio }}</p>
+            <div class="rela-block caps greyed">Projects</div>
+            {% for proj in user.projects %}
+                <h3>{{ proj.name }}</h3>
+                <p class="light">{{ proj.tech_stack }}</p>
+                <p class="justified">{{ proj.description }}</p>            
+            {% endfor %}      
+        </div>    
+</body>
+</html>  
