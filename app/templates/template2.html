@@ -1,0 +1,281 @@
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Currículo - Estilo Escandinavo</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+<style>
+    /* Reset */
+    * {
+    box-sizing: border-box;
+    }
+    body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #f9fafb;
+    color: #2e3440;
+    line-height: 1.5;
+    }
+
+    /* Links */
+    a {
+    color: #4c8bf5;
+    text-decoration: none;
+    }
+    a:hover {
+    text-decoration: underline;
+    }
+
+    /* Container */
+    .container {
+    width: 100%;
+    max-width: 960px;
+    margin: 2rem auto 3rem auto;
+    padding: 0 1rem;
+    }
+
+    /* CV Card */
+    .cv-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #d1d5db; /* substituindo box-shadow */
+    padding: 0;
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    }
+
+    /* Layout columns (2 cols usando display: table-cell) */
+    .left-col {
+    background-color: #e6eef7;
+    padding: 2rem 2rem 2rem 2.5rem;
+    display: table-cell;
+    width: 35%;
+    vertical-align: top;
+    }
+    .right-col {
+    padding: 2rem 2.5rem 2rem 2rem;
+    display: table-cell;
+    width: 65%;
+    vertical-align: top;
+    }
+
+    /* Header */
+    header {
+    text-align: center;
+    margin-bottom: 1rem;
+    }
+    header h1 {
+    font-weight: bold;
+    font-size: 30ppx;
+    margin: 0 0 0.25rem 0;
+    color: #1f2937;
+    }
+    header p.title {
+    font-weight: 600;
+    font-size: 1.125rem;
+    color: #4b5563;
+    margin: 0;
+    }
+
+    /* Contact info */
+    .contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.9rem;
+    color: #4b5563;
+    }
+    .contact-list li {
+    margin-bottom: 0.5rem;
+    }
+
+    /* Section titles */
+    section h2 {
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: #1f2937;
+    border-bottom: 2px solid #cbd5e1;
+    padding-bottom: 0.25rem;
+    margin-bottom: 1rem;
+    }
+
+    /* Summary */
+    .summary p {
+    font-size: 1rem;
+    color: #374151;
+    }
+
+    /* Experience & Education */
+    .item {
+    margin-bottom: 1.5rem;
+    }
+    .item-header {
+    font-weight: bold;
+    color: #1f2937;
+    font-size: 1.05rem;
+    }
+    .item-subheader {
+    font-style: italic;
+    color: #6b7280;
+    font-size: 0.9rem;
+    margin-top: 0.15rem;
+    }
+    .item-desc {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    color: #4b5563;
+    }
+
+    /* Skills & Languages */
+    .skills-list,
+    .languages-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    }
+    .skills-list li,
+    .languages-list li {
+    background-color: #dbeafe;
+    color: #1e40af;
+    font-weight: bold;
+    font-size: 0.9rem;
+    padding: 0.35rem 0.9rem;
+    border-radius: 9999px;
+    margin: 0.25rem 0.5rem 0.25rem 0;
+    display: inline-block;
+    }
+
+    /* Projects & Certifications */
+    .project,
+    .certification {
+    margin-bottom: 1.5rem;
+    }
+    .project-title,
+    .cert-title {
+    font-weight: bold;
+    font-size: 1.05rem;
+    color: #1f2937;
+    }
+    .project-link {
+    font-size: 0.9rem;
+    color: #2563eb;
+    margin-left: 0.5rem;
+    }
+    .project-desc,
+    .cert-desc {
+    margin-top: 0.3rem;
+    font-size: 0.9rem;
+    color: #4b5563;
+    }
+
+    /* Icons fallback */
+    .icon-fallback {
+    font-size: 0.9rem;
+    color: #6b7280;
+    font-weight: bold;
+    }
+
+</style>
+</head>
+<body>
+  <main class="container" role="main" aria-label="Currículo de João Silva">
+    <article class="cv-card">
+      <aside class="left-col" aria-label="Informações pessoais e contato">
+        <header>
+          <h1>{{ user.name }}</h1>
+          <p class="title">Desenvolvedor Front-end</p>
+        </header>
+        <ul class="contact-list">
+          <li aria-label="Email">
+            <h3>Gmail:</h3>
+            <a href="mailto:joao.silva@email.com" target="_blank" rel="noopener noreferrer">joao.silva@email.com</a>
+          </li>
+          <li aria-label="Telefone">
+            <h3>Tel:</h3>
+            <a href="tel:+5511999999999" target="_blank" rel="noopener noreferrer">+244 950 787 059</a>
+          </li>
+          <li aria-label="LinkedIn">
+            <h3>LinkedIn:</h3>
+            <a href="https://linkedin.com/in/omar-rodrigues007" target="_blank" rel="noopener noreferrer">linkedin.com/in/omar-rodrigues007</a>
+          </li>
+          <li aria-label="GitHub">
+            <h3>GitHub:</h3><a href="https://github.com/joaosilva" target="_blank" rel="noopener noreferrer">{{ user.github_url }}</a>
+          </li>
+        </ul>
+      </aside>
+      <section class="right-col" aria-label="Conteúdo principal do currículo">
+        <section class="summary" aria-labelledby="summary-title">
+          <h2 id="summary-title">Resumo Profissional</h2>
+          <p>{{ user.bio }}</p>
+        </section>
+        <section class="experience" aria-labelledby="experience-title">
+          <h2 id="experience-title">Experiência</h2>
+          <article class="item" aria-label="Experiência na empresa Tech Solutions">
+            <div class="item-header">
+              <span>Amanah WebCraftrix</span>
+              <span>Jan 2021 - Atual</span>
+            </div>
+            <div class="item-subheader">Desenvolvedor Backend</div>
+            <p class="item-desc">Liderança no desenvolvimento de aplicações web escaláveis, implementação de design system e otimização de performance, resultando em aumento de 30% na satisfação do usuário.</p>
+          </article>
+          <article class="item" aria-label="Experiência na empresa WebCraft">
+            <div class="item-header">
+              <span>WebCraft</span>
+              <span>Mar 2018 - Dez 2020</span>
+            </div>
+            <div class="item-subheader">Desenvolvedor Backend</div>
+            <p class="item-desc">Desenvolvimento de websites responsivos e acessíveis, colaboração com equipes de design e back-end para entrega de projetos dentro do prazo e com alta qualidade.</p>
+          </article>
+          <article class="item" aria-label="Experiência na empresa StartUpX">
+            <div class="item-header">
+              <span>StartUpX</span>
+              <span>Jul 2016 - Fev 2018</span>
+            </div>
+            <div class="item-subheader">Estagiário Front-end</div>
+            <p class="item-desc">Apoio no desenvolvimento de protótipos e testes de usabilidade, aprendizado prático em tecnologias web e metodologias ágeis.</p>
+          </article>
+        </section>
+        <section class="education" aria-labelledby="education-title">
+          <h2 id="education-title">Educação</h2>
+          <article class="item" aria-label="Bacharelado em Ciência da Computação na Universidade Federal">
+            <div class="item-header">
+              <span>Colegio Àrvore da Felicidade</span>
+              <span>2023 - current</span>
+            </div>
+            <div class="item-subheader">Curso Técnico </div>
+            <p class="item-desc">Formação sólida em algoritmos, estruturas de dados, programação orientada a objetos e desenvolvimento web.</p>
+          </article>
+        </section>
+        <section class="skills" aria-labelledby="skills-title">
+          <h2 id="skills-title">Habilidades</h2>
+          <ul class="skills-list" role="list">
+            {% for skill in user.skills %}
+                <li>{{ skill }}</li>
+            {% endfor %}
+          </ul>
+        </section>
+        <section class="languages" aria-labelledby="languages-title">
+          <h2 id="languages-title">Idiomas</h2>
+          <ul class="languages-list" role="list">
+            <li>Português (Nativo)</li>
+            <li>Inglês (Avançado)</li>
+          </ul>
+        </section>
+        <section class="projects" aria-labelledby="projects-title">
+          <h2 id="projects-title">Projetos</h2>
+            {% for proj in user.projects %}
+                <article class="project" aria-label="Projeto Portfolio Pessoal">
+                    <div>
+                        <span class="project-title">{{ proj.name }}</span>
+                        <a href="https://joaosilva.dev" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Link para o portfolio pessoal">🔗</a>
+                    </div>
+                    <p class="project-desc">{{ proj.description }}</p>
+            </article>
+            {% endfor %}
+        </section>
+      </section>
+    </article>
+  </main>
+</body>
+</html>

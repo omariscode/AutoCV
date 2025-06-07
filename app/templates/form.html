@@ -21,7 +21,8 @@
       {% endif %}
     {% endwith %}
 
-    <form action="/" method="POST" enctype="multipart/form-data" class="space-y-5" @submit="loading = true">
+    <form action="{{ url_for('form_page', template=template_name) }}" method="POST" enctype="multipart/form-data" class="space-y-5" @submit="loading = true">
+      <input type="hidden" name="template" value="{{ template_name }}">
       <div>
         <label for="username" class="block text-sm font-medium text-gray-700">GitHub Username</label>
         <input type="text" name="username" id="username"
