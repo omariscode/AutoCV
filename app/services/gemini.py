@@ -1,7 +1,6 @@
 import google.generativeai as gemini
 
 class Gemini:
-
     def __init__(self):
         self.__model = gemini.GenerativeModel("gemini-1.5-flash")
         gemini.configure(api_key='AIzaSyDDH6ClHOgAw1d0H9WGidVC1R_qZOfVMMU')
@@ -26,10 +25,9 @@ class Gemini:
             - Traga elementos concretos: cite brevemente conquistas, tecnologias dominadas, tipos de projetos feitos ou problemas resolvidos.
             - A primeira frase precisa capturar totalmente a atenção (pode ser ousada, curiosa, provocativa ou inspiradora).
             - Seja conciso: no máximo 5 parágrafos pequenos ou 6 linhas de texto.
-            - Adapte o tom à idade do profissional se possível. Ele tem 17 anos, já programa, estuda e busca se destacar na área.
             - Varie a estrutura e abordagem a cada geração para não ficar repetitivo (ex: pode começar com uma citação, um número, um desafio, uma pergunta, etc).
 
-            No final, a bio deve vender esse profissional como alguém promissor, que mesmo jovem, pensa como um engenheiro maduro, cria soluções reais e está só começando a mostrar o que é capaz de construir no mundo com código.
+            No final, a bio deve vender esse profissional como alguém promissor, que cria soluções reais e está só começando a mostrar o que é capaz de construir no mundo com código.
 
             Gere apenas o texto final da bio, sem títulos ou explicações."""
 

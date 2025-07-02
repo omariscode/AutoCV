@@ -1,0 +1,265 @@
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Currículo - Mariana Silva</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Fira+Sans&display=swap"
+    rel="stylesheet" />
+  <style>
+    @page {
+      margin: 2cm;
+    }
+
+    body {
+      background: #fdf6f0;
+      color: #3a2f2f;
+      font-family: 'Fira Sans', sans-serif;
+      font-size: 12pt;
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      margin: 0.5em 0 0.25em;
+      page-break-after: avoid;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 26pt;
+      color: #b85c38;
+      font-weight: bold;
+      letter-spacing: 0.05em;
+    }
+
+    h2 {
+      font-style: italic;
+      color: #7a5a44;
+      font-size: 14pt;
+      font-weight: normal;
+    }
+
+    h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 18pt;
+      color: #b85c38;
+      border-bottom: 2px solid #b85c38;
+      padding-bottom: 0.2em;
+      margin-top: 1.5em;
+    }
+
+    h4 {
+      font-size: 13pt;
+      color: #6a4a3a;
+      font-weight: bold;
+      margin: 0.3em 0 0.2em;
+    }
+
+    a {
+      color: #b85c38;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 1em;
+    }
+
+    header {
+      border-bottom: 2px solid #b85c38;
+      padding-bottom: 1em;
+      margin-bottom: 2em;
+      overflow: hidden;
+    }
+
+    .name-title {
+      float: left;
+      width: 60%;
+    }
+
+    .contact {
+      float: right;
+      width: 35%;
+      font-size: 10pt;
+      color: #7a5a44;
+    }
+
+    .contact div {
+      margin-bottom: 0.4em;
+    }
+
+    .clearfix::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    section {
+      margin-bottom: 1.5em;
+    }
+
+    #summary {
+      background: #f7e9df;
+      padding: 1em;
+      border-radius: 6px;
+      margin-bottom: 2em;
+      color: #5a4a3a;
+      font-size: 11pt;
+    }
+
+    .period {
+      font-style: italic;
+      font-size: 10pt;
+      color: #a07a5a;
+      margin-bottom: 0.3em;
+    }
+
+    .experience-item,
+    .education-item,
+    .project-item,
+    .certification-item {
+      margin-bottom: 1em;
+    }
+
+    .skills-list,
+    .languages-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .skills-list li,
+    .languages-list li {
+      display: inline-block;
+      background: #b85c38;
+      color: #fdf6f0;
+      padding: 0.3em 0.7em;
+      margin: 0.3em 0.5em 0 0;
+      border-radius: 10px;
+      font-weight: bold;
+      font-size: 10pt;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 9pt;
+      color: #b85c38;
+      font-style: italic;
+      margin-top: 3em;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container" role="main" aria-label="Currículo de Mariana Silva">
+    <header>
+      <div class="name-title">
+        <h1>{{ user.name }}</h1>
+        <h2>Desenvolver Back-End</h2>
+      </div>
+      <div class="contact" aria-label="Informações de contato">
+        <div class="contact">
+          <div>🔗 linkedin.com/in/omar-rodrigues007</div>
+          <div>📞 +244 912 345 678</div>
+          <div>✉️ omarscode007@gmail.com</div>
+        </div>
+
+      </div>
+    </header>
+
+    <main>
+      <section id="summary" aria-labelledby="summary-title">
+        <h3 id="summary-title">Resumo Profissional</h3>
+        <p>{{ user.bio }}</p>
+      </section>
+
+      <section aria-labelledby="experience-title">
+        <h3 id="experience-title">Experiência</h3>
+        <article class="experience-item">
+          <h4>Especialista em Marketing Digital - Agência Criativa</h4>
+          <div class="period">Jan 2020 – Presente | São Paulo, SP</div>
+          <p>Desenvolvimento e execução de campanhas digitais para clientes de diversos setores, com foco em SEO, Google
+            Ads e redes sociais. Liderança de equipe de 4 analistas, aumentando o ROI médio das campanhas em 35%.</p>
+        </article>
+        <article class="experience-item">
+          <h4>Analista de Marketing - Tech Solutions</h4>
+          <div class="period">Mar 2017 – Dez 2019 | São Paulo, SP</div>
+          <p>Responsável pela análise de métricas e otimização de campanhas de mídia paga. Implementação de dashboards
+            para acompanhamento em tempo real, reduzindo custos em 20%.</p>
+        </article>
+        <article class="experience-item">
+          <h4>Assistente de Marketing - StartUp XYZ</h4>
+          <div class="period">Jan 2015 – Fev 2017 | São Paulo, SP</div>
+          <p>Suporte na criação de conteúdo e gestão das redes sociais, aumentando o engajamento em 50% no primeiro ano.
+          </p>
+        </article>
+      </section>
+
+      <section aria-labelledby="education-title">
+        <h3 id="education-title">Educação</h3>
+        <article class="education-item">
+          <h4>Bacharel em Comunicação Social - Publicidade e Propaganda</h4>
+          <div class="period">2011 – 2014 | Universidade de São Paulo (USP)</div>
+          <p>Formação focada em estratégias de comunicação, marketing digital e comportamento do consumidor.</p>
+        </article>
+      </section>
+
+      <section aria-labelledby="skills-title">
+        <h3 id="skills-title">Habilidades</h3>
+        <ul class="skills-list" aria-label="Lista de habilidades">{% for skill in user.skills %}
+          <li>{{ skill }}</li>
+          {% endfor %}
+        </ul>
+      </section>
+
+      <section aria-labelledby="languages-title">
+        <h3 id="languages-title">Idiomas</h3>
+        <ul class="languages-list" aria-label="Lista de idiomas">
+          <li>Português (Nativo)</li>
+          <li>Inglês (Avançado)</li>
+          <li>Espanhol (Intermediário)</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="projects-title">
+        <h3 id="projects-title">Projetos</h3>
+        {% for proj in user.projects %}
+        <article class="project-item">
+          <h4>{{ proj.name }}</h4>
+          <p>{{ proj.description }}</p>
+          <a href="{{ proj.url }}" target="_blank" rel="noopener"
+            aria-label="Link para o projeto Verão Sustentável no GitHub">Ver no GitHub</a>
+        </article>
+        {% endfor %}
+      </section>
+
+      <section aria-labelledby="certifications-title">
+        <h3 id="certifications-title">Certificações</h3>
+        <article class="certification-item">
+          <h4>Google Ads Certified</h4>
+          <p>Google, 2023</p>
+        </article>
+        <article class="certification-item">
+          <h4>Especialista em SEO</h4>
+          <p>SEMrush Academy, 2022</p>
+        </article>
+        <article class="certification-item">
+          <h4>Gestão de Projetos Ágeis</h4>
+          <p>Scrum Alliance, 2021</p>
+        </article>
+      </section>
+    </main>
+  </div>
+</body>
+
+</html>

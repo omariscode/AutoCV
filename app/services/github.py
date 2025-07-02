@@ -6,7 +6,6 @@ from app.models.projetcs import Project
 GITHUB_URL = "https://api.github.com/users"
 
 class GitHub:
-    
     @staticmethod
     def get_data(username) -> UserData:
         user_url = f"{GITHUB_URL}/{username}"

@@ -1,10 +1,10 @@
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Currículo - Estilo Escandinavo</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
-<style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Currículo - Estilo Escandinavo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
     /* Reset */
     * {
     box-sizing: border-box;
@@ -175,8 +175,7 @@
     color: #6b7280;
     font-weight: bold;
     }
-
-</style>
+  </style>
 </head>
 <body>
   <main class="container" role="main" aria-label="Currículo de João Silva">
@@ -189,18 +188,18 @@
         <ul class="contact-list">
           <li aria-label="Email">
             <h3>Gmail:</h3>
-            <a href="mailto:joao.silva@email.com" target="_blank" rel="noopener noreferrer">joao.silva@email.com</a>
+            <a href="" target="_blank" rel="noopener noreferrer">joao.silva@email.com</a>
           </li>
           <li aria-label="Telefone">
             <h3>Tel:</h3>
-            <a href="tel:+5511999999999" target="_blank" rel="noopener noreferrer">+244 950 787 059</a>
+            <a href="" target="_blank" rel="noopener noreferrer">+244 950 787 059</a>
           </li>
           <li aria-label="LinkedIn">
             <h3>LinkedIn:</h3>
             <a href="https://linkedin.com/in/omar-rodrigues007" target="_blank" rel="noopener noreferrer">linkedin.com/in/omar-rodrigues007</a>
           </li>
           <li aria-label="GitHub">
-            <h3>GitHub:</h3><a href="https://github.com/joaosilva" target="_blank" rel="noopener noreferrer">{{ user.github_url }}</a>
+            <h3>GitHub:</h3><a href="{{ user.github_url }}" target="_blank" rel="noopener noreferrer">{{ user.github_url }}</a>
           </li>
         </ul>
       </aside>
@@ -268,7 +267,7 @@
                 <article class="project" aria-label="Projeto Portfolio Pessoal">
                     <div>
                         <span class="project-title">{{ proj.name }}</span>
-                        <a href="https://joaosilva.dev" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Link para o portfolio pessoal">🔗</a>
+                        <a href="{{ proj.url }}" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Link para o portfolio pessoal">{{ proj.url }}🔗</a>
                     </div>
                     <p class="project-desc">{{ proj.description }}</p>
             </article>
